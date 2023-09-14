@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <title>JavaScript Quiz</title>
+        <link rel="stylesheet" href="assets/css/style.css"/>
+    </head>
+    <body>
+        <header>
+            <a id="scoreslink">Highscores</a>
+            <h1 id="time"></h1>
+        </header>
+        <main>
+            <h2 id="heading">JavaScript Quiz</h2>
+            <button id="start" type="button" >Start Quiz</button>
+            <!-- question 1 -->
+            <div class="quiz" id="Q1">
+                <h1>JavaScript is ______ Language.</h1><br>
+                <form >
+                <input type="radio" name="q1" value="Scripting"> Scripting<br>
+                <input type="radio" name="q1" value="Programming"> Programming<br>
+                <input type="radio" name="q1" value="Application"> Application<br>
+                <input type="radio" name="q1" value="None of These"> None of These<br>
+                </form>
+                <button id="submit1" onclick="submitAnswer1()">Submit Answer</button>
+                <button class="next" id ="next1" style="display: none;">Next</button>
+            </div>
+            <!-- question 2 -->
+            <div class="quiz" id="Q2">
+                <h1>Inside which HTML element do you link the JavaScript document</h1><br>
+                <form >
+                <input type="radio" name="q2" value="&lt;scripting&gt;"> &lt;scripting&gt;<br>
+                <input type="radio" name="q2" value="&lt;javaScript&gt;"> &lt;javaScript&gt;<br>
+                <input type="radio" name="q2" value="&lt;js&gt;"> &lt;js&gt;<br>
+                <input type="radio" name="q2" value="&lt;script&gt;"> &lt;script&gt;<br>
+                </form>
+                <button id="submit2" onclick="submitAnswer2()">Submit Answer</button>
+                <button class="next" id ="next2" style="display: none;">Next</button>
+            </div>
+            <!-- question 3 -->
+            <div class="quiz" id="Q3">
+                <h1>How do you create a function in JavaScript?</h1><br>
+                <form>
+                <input type="radio" name="q3" value="function:MyFunction()"> function:MyFunction()<br>
+                <input type="radio" name="q3" value="function MyFunction()"> function MyFunction()<br>
+                <input type="radio" name="q3" value="function = MyFunction()"> function = MyFunction()<br>
+                <input type="radio" name="q3" value="function(MyFunction)"> function(MyFunction)<br>
+                </form>
+                <button id = "submit3" onclick="submitAnswer3()">Submit Answer</button>
+                <button class="next" id ="next3" style="display: none;">Next</button>
+
+            </div>
+            <!-- question 4 -->
+            <div class="quiz" id="Q4">
+                <h1>Which of the following is the correct way to write a JavaScript array?</h1><br>
+                <form>
+                <input type="radio" name="q4" value="var colors = (1:'red', 2:'green', 3:'blue')"> var colors = (1:'red', 2:'green", 3:'blue')<br>
+                <input type="radio" name="q4" value="var colors = ['red','green','blue']"> var colors = ['red','green','blue']<br>
+                <input type="radio" name="q4" value="var colors = 'red','green','blue'"> var colors = 'red','green','blue'<br>
+                <input type="radio" name="q4" value="var colors = 1=(red),2=(green),3=(blue)"> var colors = 1=(red),2=(green),3=(blue)<br>
+                </form>
+                <button id = "submit4" onclick="submitAnswer4()">Submit Answer</button>
+                <button class="next" id ="next4" style="display: none;">Next</button>
+            </div>
+            <!-- question 5 -->
+            <div class="quiz" id="Q5">
+                <h1>How do you call a function named "myFunction"?</h1><br>
+                <form>
+                <input type="radio" name="q5" value="myFunction"> myFunction<br>
+                <input type="radio" name="q5" value="call function myFunction()"> call function myFunction()<br>
+                <input type="radio" name="q5" value="call myFuntion()"> call myFuntion()<br>
+                <input type="radio" name="q5" value="myFunction()"> myFunction()<br>
+                </form>
+                <button id = "submit5" onclick="submitAnswer5()">Submit Answer</button>
+                <button class="next" id ="next5" style="display: none;">Next</button>
+            </div>
+            <!-- question 6 -->
+            <div class="quiz" id="Q6">
+                <h1>Which is the correct way to write an IF statement?</h1><br>
+                <form>
+                <input type="radio" name="q6" value="if i=5"> if i=5 <br>
+                <input type="radio" name="q6" value="if (i=5) then"> if (i=5) then <br>
+                <input type="radio" name="q6" value="if i==5 then"> if i==5 then <br>
+                <input type="radio" name="q6" value="if(i==5)"> if(i==5)<br>
+                </form>
+                <button id = "submit6" onclick="submitAnswer6()">Submit Answer</button>
+                <button class="next" id="next6" style="display: none;">Next</button>
+            </div>
+            <!-- question 7 -->
+            <div class="quiz" id="Q7">
+                <h1>How can you add a comment in JavaScript code?</h1><br>
+                <form >
+                <input type="radio" name="q7" value="//comment"> //comment<br>
+                <input type="radio" name="q7" value="&lt;!--comment--&gt;"> &lt;!--comment--&gt; <br>
+                <input type="radio" name="q7" value="'comment"> 'comment<br>
+                <input type="radio" name="q7" value="#comment"> #comment <br>
+                </form>
+                <button id = "submit7" onclick="submitAnswer7()">Submit Answer</button>
+                <button class="next" id ="next7" style="display: none;">Next</button>
+            </div>
+            <!-- question 8 -->
+            <div class="quiz" id="Q8">
+                <h1>Which is the correct syntax for a FOR loop?</h1><br>
+                <form >
+                <input type="radio" name="q8" value="for i=1 to 5"> for i=1 to 5<br>
+                <input type="radio" name="q8" value="for(i&lt;=5; i++)"> for(i&lt;=5; i++)<br>
+                <input type="radio" name="q8" value="for(i=0; i&lt;=5; i++)"> for(i=0; i&lt;=5; i++)<br>
+                <input type="radio" name="q8" value="for(i=0; i&lt;=5)"> for(i=0; i&lt;=5)<br>
+                </form>
+                <button id = "submit8" onclick="submitAnswer8()">Submit Answer</button>
+                <button class="next" id ="next8" style="display: none;">Next</button>
+            </div>
+            <!-- done -->
+            <div class="quiz" id="done">
+                <h1>COMPLETED</h1>
+                <h3 id="final-score">0</h3>
+                <p>Insert your name here: <input name="name" class="test" type="text"></p><br>
+                <button type="button" id="donebtn">Done</button>
+            </div>
+            <div class="highscores" id="high" style="display: none;">
+                <h1>Highscores</h1>
+                <ul id="scoreslist"></ul>
+                <button type="button" id="back">Back</button>
+                <button type="button" id="clear">Clear Highscores</button>
+            </div>
+        </main>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>
