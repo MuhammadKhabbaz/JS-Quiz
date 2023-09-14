@@ -1,0 +1,59 @@
+* {
+    font-family: "Courier New", Courier, monospace;
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+body {
+    text-align: center;
+    background-color: beige;
+}
+header {
+    color: blanchedalmond;
+    background-color: #565350;
+    font-size: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px;
+}
+header a {
+    text-align: left;
+    font-weight: bold;
+    text-decoration: none;
+}
+header h1 {
+    font-size: 20px;
+}
+#heading {
+    margin-top: 30px;
+}
+button {
+    margin-top: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 15px;
+}
+button:hover{
+    background-color:#565350;
+    color:blanchedalmond;
+}
+.next{
+    padding: 10px 65px;
+}
+.quiz {
+    background-color: white;
+    display: none;
+    margin: 30px 30% 0px;
+    padding: 20px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+    border-image: initial;
+}
+.quiz form {
+    text-align: left;
+}
+
