@@ -95,7 +95,7 @@ const submitAnswer1 = function() {
         console.log(finalScore);
     } else {
         Q1.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit1.style.display = "none";
@@ -124,7 +124,7 @@ const submitAnswer2 = function() {
         console.log(finalScore);
     } else {
         Q2.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit2.style.display = "none";
@@ -152,7 +152,7 @@ const submitAnswer3 = function(){
         finalScore=finalScore+1;
     } else {
         Q3.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit3.style.display = "none";
@@ -180,7 +180,7 @@ const submitAnswer4 = function(){
         finalScore=finalScore+1;
     } else {
         Q4.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit4.style.display = "none";
@@ -207,7 +207,7 @@ const submitAnswer5 = function(){
         finalScore=finalScore+1;
     } else {
         Q5.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit5.style.display = "none";
@@ -234,7 +234,7 @@ const submitAnswer6 = function(){
         finalScore=finalScore+1;
     } else {
         Q6.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit6.style.display = "none";
@@ -261,7 +261,7 @@ const submitAnswer7 = function(){
         finalScore=finalScore+1;
     } else {
         Q7.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit7.style.display = "none";
@@ -288,7 +288,7 @@ const submitAnswer8 = function(){
         finalScore=finalScore+1;
     } else {
         Q8.style.color = "red";
-        begintime -= 3;
+        begintime = Math.max(begintime - 3, 0);
         timeEl.textContent = "Time: " + begintime + " seconds";
     }
     submit8.style.display = "none";
@@ -314,13 +314,16 @@ function renderScores() {
 
 donebtn.addEventListener("click", function(){
     let storedScores = JSON.parse(localStorage.getItem("quizScores"));
+    if (!storedScores) {
+        storedScores = [];
+    }
     storedScores.push({ user: userinpt.value, score: finalScore });
     localStorage.setItem("quizScores", JSON.stringify(storedScores));
     done.style.display="none";
     heading.style.display="none"
     header.style.display="none"
     highscores.style.display="inline-block";
-    scoreslist.textContent = userinpt.value + ": " + localStorage.getItem(userinpt.value)
+    scoreslist.textContent = userinpt.value + ": " + localStorage.getItem(userinpt.value);
     console.log(userinpt.value)
     renderScores();
 })
@@ -328,11 +331,12 @@ donebtn.addEventListener("click", function(){
 backButton.addEventListener('click', function() {
     location.reload()
 })
+
 clearButton.addEventListener('click', function() {
-    // Clear the highscores list
     scoreslist.innerHTML = '';
-    localStorage.removeItem('highscores');
+    localStorage.removeItem('quizScores');
 });
+
 ScoresLink.addEventListener('click', function(event) {
     event.preventDefault();
     

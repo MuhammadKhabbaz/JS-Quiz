@@ -23,6 +23,10 @@ header a {
     font-weight: bold;
     text-decoration: none;
 }
+a:hover{
+    color:rgb(19, 153, 249);
+    cursor: pointer;
+}
 header h1 {
     font-size: 20px;
 }
@@ -39,10 +43,12 @@ button {
 button:hover{
     background-color:#565350;
     color:blanchedalmond;
+    cursor: pointer;
 }
 .next{
     padding: 10px 65px;
 }
+
 .quiz {
     background-color: white;
     display: none;
